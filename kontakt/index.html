@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Slab&display=swap" rel="stylesheet">
+
+    <title>kontakt</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="hauptContainerContact">
+            <a href="../index.html"><button class="back"type="button"><</button></a> 
+     <img class="contactPic"  src="../img/contactBird2_rev.png" alt="not found">
+
+
+
+     <h2>Sende uns deine Geschichte!</h2>
+     
+     <div class="container">
+       <form name="contact"  method="POST" data-netlify-recaptcha="true" data-netlify="true">
+       
+           <label for="fname">Name</label>
+           <input type="text" id="fname" name="name" placeholder="Dein Name..">
+
+
+          <label for="email">E-mail</label>
+          <input type="text" id="eMail" name="firstname" placeholder="Deine E-mail-Adresse">
+
+           <label for="subject">Geschichte</label>
+           <textarea id="subject" name="subject" placeholder="Deine Geschichte..." style="height:200px"></textarea>
+          
+          <div class="reCapSubmit">
+           <div data-netlify-recaptcha="true"></div>
+           <button class="btn" id="btn1" type="submit" value="Senden">Senden</button>
+          </div>
+
+       </form>
+                <p class="successMsg" role="alert" hidden>sendet...</p>
+                <p class="errorMsg" role="alert" hidden>etwas schiefgegangen...</p>
+     </div>
+
+
+
+        <div class="card">
+            <p>Unsere E-Mail-Adresse: <a id="email" href="mailto:"fruttidi-mare@posteo.de">fruttidi-mare@posteo.de</a></p>
+        </div>
+
+
+        <script>
+            const form = document.querySelector('form');
+            form.addEventListener('submit', async event => {
+              event.preventDefault();
+              
+              // disable button to prevent multiple submissions
+              form.querySelector('button').disabled = true;
+          
+              // make the request to submit the form
+              try {
+                const response = await fetch('/', {
+                  method: 'post',
+                  headers: {
+                    'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                  },
+                  // parse and submit all included form data
+                  body: new URLSearchParams(new FormData(form)).toString()
+                });
+          
+                // if it was successful show success message
+                if (response.status === 200) {
+                  document.querySelector('.successMsg').hidden = false;
+                } else {
+                  document.querySelector('.errorMsg').hidden = false;
+                }
+              } catch (e) {
+                console.error(e);
+              }
+            });
+          </script>
+
+
+
+
+  <script src="./app.js"></script>
+
+</body>
+</html>

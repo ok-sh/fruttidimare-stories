@@ -1,0 +1,304 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+}
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Amatic SC", cursive;
+  font-weight: 300;
+  background-color: rgb(0, 0, 0);
+}
+h1,
+h2,
+h3 {
+  color: rgba(255, 189, 131, 0.9);
+}
+.uberSchrift {
+  display: block;
+}
+.megaSchrift {
+  font-family: "Amatic SC", cursive;
+  margin-top: 2%;
+  padding: 1rem;
+  font-size: 4vmax;
+  letter-spacing: 1rem;
+  word-spacing: 1rem;
+  text-align: center;
+}
+
+.hauptContainer {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 300%;
+  background-color: #000;
+  background-image: url("./img/fruttidimare7.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+  content: "";
+  overflow: hidden;
+}
+
+.hauptContainer::after {
+  content: "";
+}
+img {
+  position: absolute;
+  display: block;
+}
+.theWal {
+  top: 0;
+  left: -550px;
+  width: 526px;
+  background-color: transparent;
+  position: absolute;
+  display: inline-block;
+
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 4s infinite;
+
+  z-index: 1;
+}
+.theWal:hover,
+.theWal:focus {
+  filter: opacity(0.85);
+}
+
+.leoSwim {
+  bottom: 48%;
+  left: 4%;
+  width: 40vmax;
+
+  -moz-animation: strangeSwim 9s infinite;
+  -webkit-animation: strangeSwim 9s infinite;
+  animation: strangeSwim ease-in-out 9s infinite;
+
+  z-index: 2;
+}
+.leoSwim:hover {
+  animation: scaleAgain 2s;
+  animation-iteration-count: infinite;
+}
+
+.briHorse {
+  bottom: 19%;
+  right: 3%;
+  width: 30vmax;
+  -moz-animation: walBounce 2.5s infinite;
+  -webkit-animation: walBounce 2.5s infinite;
+  animation: walBounce 3s infinite;
+  z-index: 2;
+}
+.briHorse:hover,
+.briHorse:focus {
+  animation: walBounce2 3s infinite;
+}
+.cat {
+  bottom: 3%;
+  left: 3%;
+  width: 8%;
+  border-radius: 50%;
+
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce -1s 3s ease-in-out infinite;
+  z-index: 2;
+}
+.bird {
+  top: 13%;
+  right: 10%;
+  width: 10vmax;
+  border-radius: 50%;
+  transition: ease 1s;
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s ease-in-out infinite;
+  z-index: 2;
+}
+.bird:hover,
+.bird:focus {
+  animation: birdJumping 0.5s infinite;
+}
+.bildRahmen {
+  bottom: 8%;
+  left: 12%;
+  width: 12vmax;
+  padding: 0.5rem;
+
+  transform: rotate(10grad);
+  transition: ease 1s;
+  animation: rotatePic 7s infinite;
+  z-index: 2;
+}
+.bildRahmen:hover,
+.bildRahmen:focus {
+  box-shadow: rgb(250, 241, 212) 0 0 15px -4px;
+  filter: brightness(2.5);
+}
+
+#copyright {
+  z-index: 10;
+  font-weight: 500;
+  color: #f89d4d;
+  display: block;
+  position: absolute;
+  bottom: 1%;
+  font-size: 1.5rem;
+  font-style: normal;
+  letter-spacing: 0.1rem;
+  cursor: unset;
+}
+
+/* #canvas {
+  position: absolute;
+} */
+
+@keyframes birdJumping {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15%);
+    /* filter: grayscale(0.5); */
+  }
+  100% {
+    transform: translateY(-0px);
+    /* filter: grayscale(1); */
+  }
+}
+
+@keyframes bounce {
+  0%,
+  50%,
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    transform: translateY(10px);
+  }
+  75% {
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    transform: translateY(10px);
+  }
+}
+
+@keyframes walBounce {
+  0%,
+  50%,
+  100% {
+    -moz-transform: translateY(0);
+    -moz-transform: scale(1, 0.95);
+    -ms-transform: translateY(0);
+    -ms-transform: scale(1, 0.95);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    transform: scale(1, 0.95);
+  }
+  25% {
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  75% {
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+@keyframes walBounce2 {
+  0%,
+  50%,
+  100% {
+    -moz-transform: translateY(0);
+    -moz-transform: scale(1, 0.95);
+    -ms-transform: translateY(0);
+    -ms-transform: scale(1, 0.95);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    transform: scale(1, 0.95);
+  }
+  25% {
+    transform: translateY(-100px) scale(1, 1.05);
+  }
+  75% {
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-100px) scale(1, 1.05);
+  }
+}
+@keyframes strangeSwim {
+  0%,
+  50%,
+  100% {
+    -moz-transform: scale(0.95, 0.8);
+    -ms-transform: scale(0.95, 0.8);
+    -webkit-transform: scale(0.95, 0.8);
+    transform: scale(1);
+  }
+  25% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  75% {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes scaleAgain {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.65);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotatePic {
+  0% {
+    transform: translateY(0px) rotate(10deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(25deg);
+  }
+
+  50% {
+    transform: translateY(0px) rotate(10deg);
+  }
+
+  75% {
+    transform: translateY(-8px) rotate(30deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(10deg);
+  }
+}

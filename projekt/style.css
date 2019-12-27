@@ -1,0 +1,149 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Amatic SC", cursive;
+  font-weight: 300;
+  background-color: rgb(0, 0, 0);
+}
+h1,
+h2,
+h3 {
+  color: rgba(255, 189, 131, 0.9);
+}
+h2 {
+  font-size: 3vmax;
+  margin: 1vw;
+}
+p {
+  color: rgba(255, 189, 131, 0.9);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 1.6px;
+  word-spacing: 2px;
+  font-family: "Josefin Slab", serif;
+  line-height: 1.5;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  margin: 2vw;
+  width: 80vw;
+  padding: 3vw;
+  border: rgba(255, 189, 131, 0.4) solid 1px;
+  border-radius: 5px;
+
+  background: #000000bd;
+}
+.uberSchrift {
+  display: flex;
+  width: max-content;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vmax;
+  margin-left: 50%;
+  margin-bottom: 2vw;
+  margin-top: 1vw;
+  border-radius: 5px;
+  padding: 1.5vw;
+  transform: translate(-50%);
+}
+
+.hauptContainerUber {
+  position: relative;
+  padding: 2vw;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  background-color: #000;
+  background-image: url("../img/fruttidimare7.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+  content: "";
+}
+.hauptContainer::after {
+  content: "";
+}
+img {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65vw;
+}
+
+#leobriwal {
+  display: block;
+  animation: bounce 6s infinite;
+}
+button.back {
+  position: fixed;
+  top: 5%;
+  left: 2%;
+  font-size: 1.5rem;
+  border: rgba(255, 189, 131, 0.5) solid 1px;
+  border-radius: 10%;
+  color: rgba(252, 155, 29, 0.9);
+  background-color: transparent;
+  outline: none;
+  padding: 0 0.5rem;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+button.back:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 0 1px 1px whitesmoke;
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 768px) {
+  .uberSchrift {
+    font-size: 4.5vmax;
+  }
+  .card p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  50%,
+  100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  75% {
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+}

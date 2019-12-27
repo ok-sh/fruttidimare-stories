@@ -1,0 +1,145 @@
+  @font-face {
+    font-family: 'typeWriter';
+    src: url('../1942.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+        
+body{
+  
+    box-sizing: border-box;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 300;
+    font-size: 1.5rem;
+    background-color: rgb(0, 0, 0);
+    
+}
+h1,h2,h3 {
+  color: rgba(255, 189, 131, 0.9);
+  font-size: 1.75rem;
+}
+h2{
+    font-size: 3vmax;
+    margin: 1vw;
+}
+p{
+  color: rgba(255, 189, 131, 0.9);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 1.6px;
+  word-spacing: 2px;
+  font-family: 'Josefin Slab', serif;
+  line-height: 1.5;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+
+}
+
+.card{
+  margin: 2vw;
+  width: 45vh;
+  padding: 3vw;
+  border: rgba(255, 189, 131, 0.4) solid 1px;
+  border-radius: 5px;
+  
+  background-color: #000000bd;
+}
+.card1{
+  width: 75vw ;
+}
+.uberSchrift {
+  display: flex;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vmax;
+  margin-left: 50%;
+  border-radius: 5px;
+  
+  transform:translate(-50%);
+ 
+}
+
+.hauptContainerUber {
+  position: relative;
+  padding: 2vw;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  background-color:  #000;
+  background-image: url("../img/fruttidimare7.jpg");
+  background-position: top; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  z-index: 10; 
+  content: '';
+}
+.hauptContainerUber img{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+}
+.hauptContainer::after{
+  content: '';
+}
+
+button.back{
+  position: fixed;
+  top: 5%;
+  left: 2% ;
+  font-size: 1.5rem;
+  border: rgba(255, 189, 131, 0.5) solid 1px;
+  border-radius: 10%;
+  color: rgba(252, 155, 29,0.9);
+  background-color: transparent;
+  outline: none;
+  padding: 0 0.5rem;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+button.back:hover{
+  transform: translateX(-5px);
+  box-shadow: 0 0 1px 1px whitesmoke;
+  color: whitesmoke;
+}
+
+#dialogBriLeo{
+  text-align: center;
+}
+
+@media only screen and (max-width:768px){
+  .uberSchrift{
+    font-size: 4.5vmax;
+  }
+  .card p{
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .card h2 {
+    text-align: center;
+  }
+  .hauptContainerUber img {
+    width: 70vw;
+  }
+  
+  }
