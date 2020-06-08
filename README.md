@@ -1,1 +1,2 @@
-There are some funny CSS - Javascript Animations in this Project.
+Some funny CSS && Javascript Animations from fruttidimare-stories.com
+
