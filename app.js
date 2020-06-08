@@ -5,6 +5,12 @@ const mouseLeave = function() {
   dx /= 10;
 };
 const wal = document.getElementsByClassName("theWal");
+const preloader = document.getElementById("loader");
+const down_symbol = document.getElementById("downSymbol");
+down_symbol.addEventListener("click",godown);
+
+
+
 wal[0].addEventListener("mouseover", mouseOver);
 wal[0].addEventListener("mouseleave", mouseLeave);
 let bodyHeight = document.body.scrollHeight;
@@ -20,7 +26,7 @@ let moveIt = setInterval(function() {
   let walTop = parseInt(wal[0].style.top, 10);
 
   if (walLeft > window.innerWidth + 125) {
-    console.log("zu weit!");
+  
     wal[0].src = "img/wal2.png";
     dx = -dx;
   } else if (walLeft < -680) {
@@ -35,12 +41,37 @@ let moveIt = setInterval(function() {
   y += dy;
 }, 14);
 
+
+
+  
+
+
+function godown (){
+  down_symbol.classList.add("hidden");
+  window.scrollTo(0,document.querySelector("#copyright").scrollHeight);
+};
+
+function preload_end(){
+  
+  preloader.classList.add("hidden");
+  //downsymbol ---
+};
+
+function scrollFunction() {
+  console.log("test");
+  down_symbol.style.opacity = 1 - ( .01 * document.body.scrollTop);
+};
+
 const init = function() {
   bodyHeight = document.body.scrollHeight;
 };
 
+window.addEventListener("load", preload_end)
 window.onload = moveIt;
 window.onresize = init;
+//scroll-verhalten
+window.onscroll = function() {scrollFunction()};
+
 
 //------------
 

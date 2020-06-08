@@ -1,6 +1,7 @@
 html,
 body {
-  height: 100%;
+  height: auto;
+  
   box-sizing: border-box;
 }
 
@@ -22,6 +23,13 @@ p {
   word-spacing: 2px;
   font-family: "Josefin Slab", serif;
   line-height: 1.5;
+}
+h1,h2,h3 {
+  color:#f89d4d;
+  text-align: center;
+}
+.container{
+  margin-top: 2rem !important;
 }
 .hauptContainerContact {
   position: relative;
@@ -199,6 +207,14 @@ button[type="submit"]:hover {
 
   height: max-content;
   margin: 0 auto 5%;
+}
+.form-sub-label{
+  color: rgb(236, 142, 19)!important;
+  font-size: 1rem!important;
+  
+}
+.form-line-active{
+  background-color: #5A4E7A!important;
 }
 
 @media only screen and (max-width: 767px) {

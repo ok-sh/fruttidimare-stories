@@ -16,14 +16,25 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onscroll="scrollFunction">
+    <div class="loader" id="loader">
+       
+      <img id="turtle" src="./img/turtle_leonie_small.png" alt="loading..."> 
+      <img id="loading" src="./img/loading.svg" alt="">
+   
+    </div>
+
+
+   <a href="#copyright"><div id="downSymbol">&#8595;</div></a>
+
     <div class="hauptContainer">
       <!-- <canvas id="canvas"></canvas> -->
       <h1 class="megaSchrift">Frutti Di Mare</h1>
 
       <a href="./projekt"
-        ><img class="bildRahmen" src="./img/bild_rahmen2.png" alt="not found!"
+        ><img class="bildRahmen" src="./img/bild_rahmen2.png" alt="bild rahmen"
       /></a>
+      
       <a href="./projekt/"
         ><img class="theWal" id="theWal" src="./img/wal1.png" alt="theWal"
       /></a>
@@ -31,14 +42,17 @@
         ><img class="leoSwim" src="./img/leo5.png" alt="leoSwim"
       /></a>
       <a href="./uber"
-        ><img class="briHorse" src="./img/Bri_on_horse3.png" alt="briHorse"
+        ><img class="briHorse" src="./img/bri_on_horse3.png" alt="briHorse"
       /></a>
       <a href="./kontakt"
-        ><img class="bird" src="./img/contactBird2.png" alt="bird"
+        ><img class="bird" src="./img/bird2.png" alt="bird"
       /></a>
       <!-- <a href="./projekt"><img class="cat" src="./img/ed-cat-isolated2.png" alt="cat"></a> -->
+      
       <p id="copyright">©copyright fruttidimare-stories.com</p>
     </div>
+
+
 
     <script src="app.js"></script>
   </body>
